@@ -1,0 +1,16 @@
+.transactionHistory {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid rgb(58, 57, 58);
+  text-align: center;
+  background: rgba(0, 0, 255, 0.185);
+}
+
+.transactionHistory th {
+  padding: 10px;
+}
+
+.transactionHistory td {
+  padding: 10px;
+}

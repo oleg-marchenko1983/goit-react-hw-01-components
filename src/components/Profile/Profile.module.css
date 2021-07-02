@@ -1,0 +1,52 @@
+.profile {
+  width: 250px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgba(196, 13, 13, 0.281);
+  border-radius: 5%;
+  background-color: brgba(204, 198, 204, 0.11);
+}
+
+.avatar {
+  max-width: 200px;
+}
+
+.stats {
+  display: flex;
+  list-style: none;
+}
+
+.stats > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats > li:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+.label {
+  color: black;
+}
+
+.quantity {
+  color: cadetblue;
+}
+
+.name {
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tag {
+  color: black;
+}
+
+.location {
+  color: cadetblue;
+}
+
+.views {
+  color: cadetblue;
+}
