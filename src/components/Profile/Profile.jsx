@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import css from '../Profile/Profile.module.css';
 import defaultImage from '../../mock-data/default.png';
+
 export default function Profile(props) {
   const { name, tag, location, avatar = defaultImage, stats } = props;
 

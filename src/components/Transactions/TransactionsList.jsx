@@ -1,17 +1,8 @@
 import PropTypes, { arrayOf } from 'prop-types';
+import { Transaction } from './Transaction';
 import css from './Transactions.module.css';
 
-function Transaction({ type, amount, currency }) {
-  return (
-    <>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </>
-  );
-}
-
-export default function Transactions({ transactions }) {
+export default function TransactionsList({ items }) {
   return (
     <table className={css.transactionHistory}>
       <thead>
@@ -23,7 +14,7 @@ export default function Transactions({ transactions }) {
       </thead>
 
       <tbody>
-        {transactions.map(({ id, type, amount, currency }) => {
+        {items.map(({ id, type, amount, currency }) => {
           return (
             <tr key={id}>
               <Transaction type={type} amount={amount} currency={currency} />
@@ -35,13 +26,7 @@ export default function Transactions({ transactions }) {
   );
 }
 
-Transaction.propTypes = {
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
-};
-
-Transactions.propTypes = {
+TransactionsList.propTypes = {
   transactions: arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

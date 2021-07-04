@@ -1,14 +1,6 @@
 import PropTypes from 'prop-types';
+import { StatItem } from './StatItems';
 import css from '../Statistics/Statistics.module.css';
-
-function StatItem({ label, percentage }) {
-  return (
-    <>
-      <span className={css.label}>{label}</span>
-      <span className={css.percentage}>{percentage}%</span>
-    </>
-  );
-}
 
 export default function Statistic({ title, stats }) {
   return (
@@ -33,9 +25,4 @@ Statistic.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
-};
-
-StatItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
 };
