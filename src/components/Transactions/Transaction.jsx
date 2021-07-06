@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export function Transaction({ type, amount, currency }) {
+export const Transaction = ({ type, amount, currency }) => {
   return (
     <>
       <td>{type}</td>
@@ -8,7 +8,7 @@ export function Transaction({ type, amount, currency }) {
       <td>{currency}</td>
     </>
   );
-}
+};
 
 Transaction.propTypes = {
   type: PropTypes.string.isRequired,

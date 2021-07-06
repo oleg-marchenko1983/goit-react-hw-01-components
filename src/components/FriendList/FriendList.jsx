@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Friend } from './Friend';
 import css from '../FriendList/FriendList.module.css';
 
-export default function FriendsList({ friends }) {
+export const FriendsList = ({ friends }) => {
   return (
     <ul className={css.friendList}>
       {friends.map(({ id, name, avatar, isOnline }) => (
@@ -12,7 +12,7 @@ export default function FriendsList({ friends }) {
       ))}
     </ul>
   );
-}
+};
 
 FriendsList.propTypes = {
   friends: PropTypes.arrayOf(

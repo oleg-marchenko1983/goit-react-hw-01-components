@@ -2,7 +2,7 @@ import PropTypes, { arrayOf } from 'prop-types';
 import { Transaction } from './Transaction';
 import css from './Transactions.module.css';
 
-export default function TransactionsList({ items }) {
+export const TransactionsList = ({ items }) => {
   return (
     <table className={css.transactionHistory}>
       <thead>
@@ -24,7 +24,7 @@ export default function TransactionsList({ items }) {
       </tbody>
     </table>
   );
-}
+};
 
 TransactionsList.propTypes = {
   transactions: arrayOf(

@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import css from '../Profile/Profile.module.css';
 import defaultImage from '../../mock-data/default.png';
 
-export default function Profile(props) {
-  const { name, tag, location, avatar = defaultImage, stats } = props;
-
+export const Profile = ({ name, tag, location, avatar = defaultImage, stats }) => {
   return (
     <div className={css.profile}>
       <div className="description">
@@ -30,7 +28,7 @@ export default function Profile(props) {
       </ul>
     </div>
   );
-}
+};
 
 Profile.propTypes = {
   name: PropTypes.string.isRequired,

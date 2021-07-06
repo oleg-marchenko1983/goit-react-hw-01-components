@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import defaultImage from '../../mock-data/default.png';
 import css from '../FriendList/FriendList.module.css';
 
-export function Friend({ avatar = defaultImage, name, isOnline }) {
+export const Friend = ({ avatar = defaultImage, name, isOnline }) => {
   const onlineStatus = `${isOnline ? 'online' : 'offline'}`;
   return (
     <>
@@ -11,7 +11,7 @@ export function Friend({ avatar = defaultImage, name, isOnline }) {
       <p className={css.name}>{name}</p>
     </>
   );
-}
+};
 
 Friend.propTypes = {
   avatar: PropTypes.string,
